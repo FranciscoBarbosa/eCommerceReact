@@ -8,10 +8,11 @@ function App() {
 
   return (
     <>
-      <Link href="https://react-tutorial.app/" >React Tutorial</Link>
-      <Button >Login</Button>
-      <Container />
-      <Input type="text" />
+    <Container className="app">
+        <Link href="https://react-tutorial.app/" >React Tutorial</Link>
+        <Button disabled={true}>Login</Button>
+        <Input type="text" />
+      </Container>
     </>
   )
 }
