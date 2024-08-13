@@ -1,18 +1,23 @@
-import { Input } from './Input.jsx'
-import { Link } from './Link.jsx'
+import { useState } from 'react'
 import { Button } from './Button.jsx'
-import { Container } from './Container.jsx'
+import { StoreFront } from './StoreFront.jsx';
 import './App.css'
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
 
+  function handleClickLogin(){
+    setLoggedIn(!loggedIn);
+  }
   return (
     <>
-    <Container className="app">
-        <Link href="https://react-tutorial.app/" >React Tutorial</Link>
-        <Button disabled={true}>Login</Button>
-        <Input type="text" />
-      </Container>
+      <h2>Please Login</h2>
+      {loggedIn && <Button className="btn btn-primary" onClick={handleClickLogin}>Login</Button>}
+      {!loggedIn && 
+        <StoreFront>
+          <button className="btn btn-outline" onClick={handleClickLogin}>Logout</button>
+        </StoreFront>
+      }
     </>
   )
 }
