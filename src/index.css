@@ -4,6 +4,16 @@
   --light-gray: #DADCE0;
 }
 
+.landing {
+  margin: 20px;
+}
+.main {
+  background-color: #222;
+}
+.login-btn  {
+  margin: 20px;
+}
+
 .ui-link {
   text-decoration: none;
   color: var(--primary);
